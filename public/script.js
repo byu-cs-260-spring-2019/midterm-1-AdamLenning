@@ -12,7 +12,7 @@ let app = new Vue({
         async search() {
             try {
               this.loading = true;
-              const response = await axios.get('https://openlibrary.org/search.json?q=the+lord+of+the+rings');
+              const response = await axios.get('https://openlibrary.org/search.json?q=' + searchField);
               this.current = JSON.parse(response);
               this.loading = false;
             } catch (error) {
