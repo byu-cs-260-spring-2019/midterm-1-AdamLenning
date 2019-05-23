@@ -15,8 +15,8 @@ let app = new Vue({
               const response = await axios.get('https://openlibrary.org/search.json?q=' + this.searchField);
               this.current = JSON.parse(response);
               this.loading = false;
-            } catch (error) {
-              console.log(error);
+            } catch (err) {
+              console.log(err);
             }
         },
     },
